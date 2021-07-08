@@ -1,0 +1,13 @@
+services:
+  _instanceof:
+    Rock\Core\Twig\HookInterface:
+      tags: [ 'rock.template_hook' ]
+
+  Rock\Core\Twig\Extension:
+    tags: [ 'twig.extension' ]
+    arguments: [ '@Rock\Core\Twig\Renderer' ]
+
+  Rock\Core\Twig\Renderer:
+    arguments:
+      - !tagged_iterator rock.template_hook
+      - '@Twig_Environment'

@@ -1,0 +1,25 @@
+{
+    "name": "braunstetter/rock-core-bundle",
+    "description": "The base of a reusable symfony system. A quickstart for every project.",
+    "type": "symfony-bundle",
+    "require": {
+        "php": "^8.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Brauner",
+            "email": "michaelbrauner82@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rock\\Core\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rock\\Core\\Test\\": "tests/"
+        }
+    }
+}

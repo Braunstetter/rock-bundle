@@ -17,7 +17,8 @@
         "symfony/options-resolver": "^5.3",
         "symfony/string": "^5.3",
         "symfony/security-bundle": "^5.3",
-        "symfony/asset": "^5.3"
+        "symfony/asset": "^5.3",
+        "braunstetter/template-hooks-bundle": "@dev"
     },
     "autoload": {
         "psr-4": {
@@ -29,6 +30,12 @@
             "Rock\\Test\\": "tests/"
         }
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../TemplateHooksBundle"
+        }
+    ],
     "require-dev": {
         "phpunit/phpunit": "^9.5",
         "symfony/test-pack": "^1.0"

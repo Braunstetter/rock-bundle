@@ -1,13 +1,10 @@
 services:
   _instanceof:
-    Rock\Twig\Contracts\HookInterface:
-      tags: [ 'rock.template_hook' ]
-
     Rock\Contracts\PluginInterface:
       tags: [ 'rock.plugin' ]
 
   Rock\Controller\CpController:
-    tags: [controller.service_arguments, controller.service_subscriber]
+    tags: [ controller.service_arguments, controller.service_subscriber ]
     public: true
     calls:
       - [ setContainer, [ '@Psr\Container\ContainerInterface' ] ]
@@ -19,13 +16,7 @@ services:
   Rock\Twig\Extension:
     tags: [ 'twig.extension' ]
     arguments:
-      - '@Rock\Twig\Renderer'
       - '@Rock\Services\Menu'
-      - '@Twig_Environment'
-
-  Rock\Twig\Renderer:
-    arguments:
-      - !tagged_iterator rock.template_hook
       - '@Twig_Environment'
 
   Rock\Menu\MainMenu:
@@ -35,7 +26,7 @@ services:
   Rock\Routes\RouteLoader:
     public: true
     autowire: true
-    tags: ['routing.loader']
+    tags: [ 'routing.loader' ]
 
   Rock\Services\Menu:
     arguments:

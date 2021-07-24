@@ -17,13 +17,11 @@ use Twig\TwigTest;
 
 class Extension extends AbstractExtension
 {
-    private Renderer $renderer;
     private Menu $menu;
     private Environment $templating;
 
-    public function __construct(Renderer $renderer, Menu $menu, Environment $templating)
+    public function __construct(Menu $menu, Environment $templating)
     {
-        $this->renderer = $renderer;
         $this->menu = $menu;
         $this->templating = $templating;
     }
@@ -31,19 +29,7 @@ class Extension extends AbstractExtension
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('hook', [$this->renderer, 'invokeHook'], ['is_safe' => ['html'], 'needs_context' => true]),
             new TwigFunction('rock_menu', [$this, 'getRockMenu'], ['is_safe' => ['html'], 'needs_context' => true])
-        ];
-    }
-
-
-    /**
-     * @return HookTokenParser[]
-     */
-    #[Pure] public function getTokenParsers(): array
-    {
-        return [
-//            new HookTokenParser($this->renderer)
         ];
     }
 

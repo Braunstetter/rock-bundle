@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block metadata %}{% endblock %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/rock/tailwind.css') }}">
+    {% endblock %}
+    {% block javascripts %}{% endblock %}
+
+</head>
+<body>
+{% block container %}{% endblock %}
+</body>
+</html>

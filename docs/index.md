@@ -1,4 +1,4 @@
-# RockCoreBundle
+# RockBundle
 
 Flexible theming system for Symfony applications.
 

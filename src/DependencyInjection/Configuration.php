@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Rock\Core\DependencyInjection;
+namespace Rock\DependencyInjection;
 
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;

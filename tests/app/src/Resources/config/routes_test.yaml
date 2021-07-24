@@ -1,0 +1,5 @@
+# config/routes/annotations.yaml
+blog_list:
+  path: /template-hook-test
+  controller: Rock\Test\app\src\Controller\TemplateHookTestController::index
+

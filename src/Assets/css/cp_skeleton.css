@@ -1,0 +1,39 @@
+.global-container {
+    @apply h-screen flex overflow-hidden bg-gray-100;
+}
+
+.global-sidebar {
+    @apply hidden md:flex md:flex-shrink-0 flex-col w-64 overflow-y-auto;
+
+    > logo {
+        @apply flex items-center h-16 flex-shrink-0 px-4 bg-gray-900;
+    }
+
+    > section {
+        @apply flex-1 px-2 py-4 bg-gray-800 space-y-1;
+
+        a {
+            @apply text-gray-400 hover:text-gray-100;
+            @apply flex items-center px-2 py-2 text-sm font-medium rounded-md;
+            @apply transition-colors duration-150 ease-in-out;
+
+            &.active {
+                @apply text-gray-300 !important;
+            }
+
+        }
+
+        svg {
+            @apply mr-3 flex-shrink-0 h-6 w-6;
+        }
+
+        .section {
+            @apply flex-1 px-2 space-y-1;
+        }
+
+        .system {
+            @apply bg-gray-900 rounded mb-3 !important;
+        }
+    }
+
+}

@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Rock\Core\Twig\TokenParser;
+namespace Rock\Twig\TokenParser;
 
 
-use Rock\Core\Twig\Nodes\HookNode;
-use Rock\Core\Twig\Renderer;
+use Rock\Twig\Nodes\HookNode;
+use Rock\Twig\Renderer;
 use Twig\Node\Expression\ConstantExpression;
 use Twig\Node\Node;
 use Twig\Token;

@@ -1,0 +1,7 @@
+{% use '@Rock/menu/blocks/main_menu.html.twig' %}
+
+<nav id="rock_main_menu">
+    {% for entry in menus %}
+        {{ block('menu') }}
+    {% endfor %}
+</nav>

@@ -1,0 +1,25 @@
+.sidebar-nav {
+    @apply flex-1 px-2 py-4 bg-gray-800 space-y-1;
+
+    a {
+        @apply text-gray-400 hover:text-gray-100;
+        @apply flex items-center px-2 py-2 text-sm font-medium rounded-md;
+        @apply transition-colors duration-150 ease-in-out;
+    }
+
+    svg {
+        @apply mr-3 flex-shrink-0 h-6 w-6;
+    }
+
+    .section {
+        @apply flex-1 px-2 space-y-1;
+    }
+
+    .system {
+        @apply bg-gray-900 rounded mb-3 !important;
+
+        > a {
+            @apply text-gray-300;
+        }
+    }
+}

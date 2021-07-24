@@ -1,0 +1,16 @@
+{
+  "name": "RockBundle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Slowwie <michaelbrauner82@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^1.5.0",
+    "autoprefixer": "^10.3.1",
+    "file-loader": "^6.0.0",
+    "postcss": "^8.3.5",
+    "postcss-loader": "^5.0.0",
+    "postcss-nested-ancestors": "^2.0.0",
+    "tailwindcss": "^2.2.4"
+  }
+}

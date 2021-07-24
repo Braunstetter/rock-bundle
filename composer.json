@@ -1,25 +1,36 @@
 {
-    "name": "braunstetter/rock-core-bundle",
-    "description": "The base of a reusable symfony system. A quickstart for every project.",
+    "name": "braunstetter/rock-bundle",
     "type": "symfony-bundle",
-    "require": {
-        "php": "^8.0"
-    },
+    "description": "A base bundle for the rock.systems ecosystem",
     "license": "MIT",
     "authors": [
         {
-            "name": "Michael Brauner",
+            "name": "Slowwie",
             "email": "michaelbrauner82@gmail.com"
         }
     ],
+    "require": {
+        "php": "^8.0",
+        "symfony/framework-bundle": "^4.4|^5.0",
+        "symfony/twig-bundle": "5.3.*",
+        "symfony/yaml": "5.3.*",
+        "symfony/options-resolver": "^5.3",
+        "symfony/string": "^5.3",
+        "symfony/security-bundle": "^5.3",
+        "symfony/asset": "^5.3"
+    },
     "autoload": {
         "psr-4": {
-            "Rock\\Core\\": "src/"
+            "Rock\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Rock\\Core\\Test\\": "tests/"
+            "Rock\\Test\\": "tests/"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "symfony/test-pack": "^1.0"
     }
 }

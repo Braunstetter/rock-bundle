@@ -1,10 +1,8 @@
 <?php
 
 
-namespace Rock\Core\Twig;
+namespace Rock\Twig;
 
-
-use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
@@ -12,19 +10,18 @@ use Twig\Error\SyntaxError;
 class Renderer
 {
     private iterable $hooks;
-    private Environment $templating;
 
-    public function __construct(iterable $hooks, Environment $templating)
+    public function __construct(iterable $hooks)
     {
         $this->hooks = $hooks;
-        $this->templating = $templating;
     }
 
     /**
+     * @param array $context
      * @param $name
      * @return string
      */
-    public function invokeHook($name): string
+    public function invokeHook(array $context, $name): string
     {
         $return = '';
 
@@ -32,9 +29,17 @@ class Renderer
 
             /** @var TemplateHook $hook */
             if ($hook->target === $name) {
-                $return .= $hook->render();
+
+                $hook->setContext($context);
+
+                try {
+                    $return .= $hook->render();
+                } catch (LoaderError | RuntimeError | SyntaxError) {
+                    // just do nothing
+                }
             }
         }
+
 
         return $return;
     }

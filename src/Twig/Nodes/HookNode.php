@@ -1,15 +1,14 @@
 <?php
 
 
-namespace Rock\Core\Twig\Nodes;
+namespace Rock\Twig\Nodes;
 
 use Exception;
-use Rock\Core\Twig\Renderer;
+use Rock\Twig\Renderer;
 use Twig\Compiler;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
-use Twig\Node\Expression\ConstantExpression;
 use Twig\Node\Node;
 
 /**
@@ -28,13 +27,9 @@ class HookNode extends Node
         /** @var Renderer $renderer */
         $renderer = $this->getAttribute('renderer');
 
-        $hookName = $this->getNode('hook')->getAttribute('value');
-
-        try {
-            $hookContent = $renderer->invokeHook($hookName);
-        } catch (LoaderError | RuntimeError | SyntaxError $e) {
-            throw new Exception($e);
-        }
+        $hookContent = $renderer->invokeHook(
+            $this->getNode('hook')->getAttribute('value')
+        );
 
         $compiler
             ->addDebugInfo($this)

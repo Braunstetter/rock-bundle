@@ -6,12 +6,12 @@ Rock templates provide usually hooks. For example:
 
 ```{% hook 'my-custom-hook-name' %}```
 
-To "hook into this" just create a class and extend `Rock\Core\Twig\TemplateHook`:
+To "hook into this" just create a class and extend `Rock\Twig\TemplateHook`:
 
 ```php
 namespace App\Twig;
 
-use Rock\Core\Twig\TemplateHook;
+use Rock\Twig\TemplateHook;
 
 class MyHook extends TemplateHook
 {

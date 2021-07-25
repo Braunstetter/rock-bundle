@@ -8,10 +8,6 @@ services:
   Rock\Twig\Extension:
     tags: [ 'twig.extension' ]
 
-  Rock\Menu\MainMenu:
-    arguments:
-      - '@Rock\Services\Plugins'
-
   Rock\Routes\RouteLoader:
     public: true
     autowire: true

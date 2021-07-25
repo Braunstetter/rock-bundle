@@ -18,7 +18,8 @@
         "symfony/string": "^5.3",
         "symfony/security-bundle": "^5.3",
         "symfony/asset": "^5.3",
-        "braunstetter/template-hooks-bundle": "@dev"
+        "braunstetter/template-hooks-bundle": "@dev",
+        "braunstetter/menu-bundle": "@dev"
     },
     "autoload": {
         "psr-4": {
@@ -34,6 +35,10 @@
         {
             "type": "path",
             "url": "../TemplateHooksBundle"
+        },
+        {
+            "type": "path",
+            "url": "../MenuBundle"
         }
     ],
     "require-dev": {

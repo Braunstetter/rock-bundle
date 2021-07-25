@@ -15,9 +15,6 @@ services:
 
   Rock\Twig\Extension:
     tags: [ 'twig.extension' ]
-    arguments:
-      - '@Rock\Services\Menu'
-      - '@Twig_Environment'
 
   Rock\Menu\MainMenu:
     arguments:
@@ -27,9 +24,3 @@ services:
     public: true
     autowire: true
     tags: [ 'routing.loader' ]
-
-  Rock\Services\Menu:
-    arguments:
-      - !tagged_iterator rock.cp_menu
-      - '@request_stack'
-      - '@router'

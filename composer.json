@@ -11,15 +11,11 @@
     ],
     "require": {
         "php": "^8.0",
-        "symfony/framework-bundle": "^4.4|^5.0",
-        "symfony/twig-bundle": "5.3.*",
-        "symfony/yaml": "5.3.*",
-        "symfony/options-resolver": "^5.3",
-        "symfony/string": "^5.3",
         "symfony/security-bundle": "^5.3",
         "symfony/asset": "^5.3",
         "braunstetter/template-hooks-bundle": "@dev",
-        "braunstetter/menu-bundle": "@dev"
+        "braunstetter/menu-bundle": "@dev",
+        "braunstetter/plugin-bundle": "@dev"
     },
     "autoload": {
         "psr-4": {
@@ -39,9 +35,14 @@
         {
             "type": "path",
             "url": "../MenuBundle"
+        },
+        {
+            "type": "path",
+            "url": "../PluginBundle"
         }
     ],
     "require-dev": {
+        "symfony/framework-bundle": "^4.4|^5.0",
         "phpunit/phpunit": "^9.5",
         "symfony/test-pack": "^1.0"
     }

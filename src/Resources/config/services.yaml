@@ -1,17 +1,9 @@
 services:
-  _instanceof:
-    Rock\Contracts\PluginInterface:
-      tags: [ 'rock.plugin' ]
-
   Rock\Controller\CpController:
     tags: [ controller.service_arguments, controller.service_subscriber ]
     public: true
     calls:
       - [ setContainer, [ '@Psr\Container\ContainerInterface' ] ]
-
-  Rock\Services\Plugins:
-    arguments:
-      - !tagged_iterator rock.plugin
 
   Rock\Twig\Extension:
     tags: [ 'twig.extension' ]

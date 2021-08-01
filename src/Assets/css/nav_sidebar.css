@@ -1,4 +1,4 @@
-.sidebar-nav {
+#sidebar-nav {
     @apply flex-1 px-2 py-4 bg-gray-800 space-y-1;
 
     a {
@@ -8,7 +8,7 @@
     }
 
     svg {
-        @apply mr-3 flex-shrink-0 h-6 w-6;
+        @apply svg-md;
     }
 
     .section {
@@ -21,5 +21,13 @@
         > a {
             @apply text-gray-300;
         }
+    }
+}
+
+button#nav-toggle {
+    @apply pr-4 border-r border-gray-200 text-gray-500 focus:outline-none md:hidden;
+
+    > svg {
+        @apply h-6 w-6;
     }
 }

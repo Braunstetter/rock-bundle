@@ -9,8 +9,12 @@
     "autoprefixer": "^10.3.1",
     "file-loader": "^6.0.0",
     "postcss": "^8.3.5",
+    "postcss-import": "^14.0.2",
     "postcss-loader": "^5.0.0",
     "postcss-nested-ancestors": "^2.0.0",
     "tailwindcss": "^2.2.4"
+  },
+  "dependencies": {
+    "postcss-nested": "^5.0.5"
   }
 }

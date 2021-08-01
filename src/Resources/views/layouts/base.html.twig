@@ -12,7 +12,12 @@
     {% block javascripts %}{% endblock %}
 
 </head>
-<body>
+
+<body data-controller="braunstetter--rock--toggle"
+      data-braunstetter--rock--toggle-hidden-class="showing-nav"
+      data-braunstetter--rock--toggle-target="item"
+>
 {% block container %}{% endblock %}
 </body>
+
 </html>

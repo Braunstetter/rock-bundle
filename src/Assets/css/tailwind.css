@@ -1,8 +1,12 @@
-@import "base.css";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+@import "utilities.css";
 @import "cp_skeleton.css";
+
 @import "nav_sidebar.css";
+@import "nav_breadcrumbs.css";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "typography.css";

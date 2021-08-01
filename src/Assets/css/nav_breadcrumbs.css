@@ -1,0 +1,25 @@
+.breadcrumbs {
+
+    @apply flex items-center justify-start;
+
+    nav {
+        @apply flex space-x-4;
+    }
+
+    svg {
+        @apply svg-sm;
+    }
+
+    a {
+        @apply flex space-x-4 items-center;
+        @apply hover:text-gray-900;
+
+        &.active {
+            @apply text-gray-600;
+        }
+
+        &.current {
+            @apply text-gray-900;
+        }
+    }
+}

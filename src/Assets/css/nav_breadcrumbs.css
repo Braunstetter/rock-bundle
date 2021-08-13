@@ -1,6 +1,6 @@
 .breadcrumbs {
 
-    @apply flex items-center justify-start;
+    @apply flex items-center justify-start text-sm;
 
     nav {
         @apply flex space-x-4;

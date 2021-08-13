@@ -1,9 +1,9 @@
 #sidebar-nav {
-    @apply flex-1 px-2 py-4 bg-gray-800 space-y-1;
+    @apply flex-1 px-2 py-4 bg-gray-800 space-y-1 text-sm;
 
     a {
         @apply text-gray-400 hover:text-gray-100;
-        @apply flex items-center px-2 py-2 text-sm font-medium rounded-md;
+        @apply flex items-center px-2 py-2 font-medium rounded-md;
         @apply transition-colors duration-150 ease-in-out;
     }
 

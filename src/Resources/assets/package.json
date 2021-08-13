@@ -18,6 +18,12 @@
         "webpackMode": "eager",
         "fetch": "eager",
         "enabled": true
+      },
+      "menu": {
+        "main": "controllers/menu_controller.js",
+        "webpackMode": "eager",
+        "fetch": "eager",
+        "enabled": true
       }
     }
   },

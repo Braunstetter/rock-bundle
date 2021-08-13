@@ -1,0 +1,21 @@
+@import "tailwindcss/utilities";
+
+@layer utilities {
+
+    .dropdown-menu {
+        @apply relative inline-block text-left;
+
+        > div {
+            @apply origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none py-1;
+
+            a {
+                @apply text-gray-700 flex items-center px-4 py-2 text-sm space-x-1 hover:bg-gray-100 hover:text-gray-900;
+
+                svg {
+                    @apply svg-md;
+                }
+            }
+        }
+
+    }
+}

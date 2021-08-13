@@ -1,8 +1,13 @@
 @import "tailwindcss/utilities";
 
 @layer utilities {
+
+    .svg-lg {
+        @apply flex-shrink-0 h-8 w-8;
+    }
+
     .svg-md {
-        @apply mr-3 flex-shrink-0 h-6 w-6;
+        @apply flex-shrink-0 h-5 w-5;
     }
 
     .svg-sm {
@@ -10,7 +15,7 @@
     }
 
 
-    .main-container {
+    .container-spacing {
         @apply px-4 lg:px-8;
     }
 }

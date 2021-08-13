@@ -12,3 +12,8 @@ services:
     public: true
     autowire: true
     tags: [ 'routing.loader' ]
+
+  Rock\Menu\UserMenu:
+    tags: ['menu']
+    arguments:
+      - '@security.authorization_checker'

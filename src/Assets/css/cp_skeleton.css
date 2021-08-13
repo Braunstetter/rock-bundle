@@ -60,7 +60,15 @@ body {
     }
 
     #global-header {
-        @apply relative main-container z-10 flex-shrink-0 flex h-16 bg-white shadow bg-gray-100;
+        @apply relative container-spacing flex justify-between items-center z-10 flex-shrink-0 flex h-16 bg-white shadow bg-gray-100;
+
+        #global-header-left {
+            @apply flex justify-start;
+        }
+
+        #global-header-right {
+            @apply flex justify-end;
+        }
     }
 
     #main-container {
@@ -74,7 +82,7 @@ body {
 
         #main-content {
 
-            @apply main-container py-6;
+            @apply container-spacing py-6;
 
             #content-container {
                 @apply flex-1;

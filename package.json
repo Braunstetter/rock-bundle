@@ -1,5 +1,5 @@
 {
-  "name": "RockBundle",
+  "name": "@braunstetter/rock",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Slowwie <michaelbrauner82@gmail.com>",
@@ -15,6 +15,7 @@
     "tailwindcss": "^2.2.4"
   },
   "dependencies": {
-    "postcss-nested": "^5.0.5"
+    "postcss-nested": "^5.0.5",
+    "stimulus-use": "^0.25.4"
   }
 }

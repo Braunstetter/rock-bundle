@@ -14,6 +14,7 @@
         "symfony/security-bundle": "^5.3",
         "symfony/asset": "^5.3",
         "braunstetter/template-hooks-bundle": "@dev",
+        "braunstetter/control-panel-bundle": "@dev",
         "braunstetter/menu-bundle": "@dev",
         "braunstetter/plugin-bundle": "@dev"
     },
@@ -28,6 +29,10 @@
         }
     },
     "repositories": [
+        {
+            "type": "path",
+            "url": "../ControlPanelBundle/Bundle"
+        },
         {
             "type": "path",
             "url": "../TemplateHooksBundle"

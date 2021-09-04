@@ -4,13 +4,11 @@
 
 
 @import "utilities.css";
-@import "cp_skeleton.css";
 
 @import "nav_sidebar.css";
 @import "nav_breadcrumbs.css";
 @import "nav_user.css";
 
 @import "typography.css";
-@import "elements.css";
 @import "menu.css";
 

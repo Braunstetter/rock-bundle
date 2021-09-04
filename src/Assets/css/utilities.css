@@ -14,7 +14,6 @@
         @apply flex-shrink-0 h-3 w-3;
     }
 
-
     .container-spacing {
         @apply px-4 lg:px-8;
     }

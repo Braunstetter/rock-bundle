@@ -1,7 +1,35 @@
-{% extends "@Rock/cp/cp_base.html.twig" %}
+{% extends '@ControlPanel/cp_base.html.twig' %}
+
+{% block title %}Hello SiteController!{% endblock %}
 
 {% block content %}
-   <div class="h-80">
-       Blubber
-   </div>
+
+    <div class="example-wrapper">
+        <h1>Hello ! ✅</h1>
+
+        This friendly message is coming from:
+
+        {{ hook('my-custom-hook-name') }}
+
+        <ul>
+            <li>Your controller att <code>
+                    <a href="{{ '/Users/michaelbrauner/Sites/Agency/braunstetter/src/Controller/SiteController.php'|file_link(0) }}">src/Controller/SiteController.php</a></code>
+            </li>
+            <li>Your template at <code>
+                    <a href="{{ '/Users/michaelbrauner/Sites/Agency/braunstetter/templates/site/index.html.twig'|file_link(0) }}">templates/site/index.html.twig</a></code>
+            </li>
+        </ul>
+    </div>
+
 {% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('app') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+

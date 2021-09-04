@@ -1,25 +1,25 @@
-{% import '@Rock/macro/transition.twig' as transition %}
+{% import '@ControlPanel/macro/transition.twig' as transition %}
 
 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
 
-    <div class="dropdown-menu" id="user-nav" data-controller="braunstetter--rock--menu">
+    <div class="dropdown-menu" id="user-nav" data-controller="braunstetter--control-panel--menu">
 
         <button type="button"
                 id="menu-button"
-                data-braunstetter--rock--menu-target="opener"
+                data-braunstetter--control-panel--menu-target="opener"
                 aria-expanded="false" aria-haspopup="true" aria-label="{{ 'My user account'|trans }}"
                 title="{{ 'My user account'|trans }}">
 
             <span class="user-picture">
-                {{ source('@Rock/images/male_avatar.svg') }}
+                {{ source('@ControlPanel/images/male_avatar.svg') }}
             </span>
 
-            {{ source('@Rock/images/caret_down.svg') }}
+            {{ source('@ControlPanel/images/caret_down.svg') }}
         </button>
 
         <div role="menu"
              aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
-             data-braunstetter--rock--menu-target="content" {{ transition.fadeInOut() }}>
+             data-braunstetter--control-panel--menu-target="content" {{ transition.fadeInOut() }}>
 
             <div id="user-info">
                 {{ app.user.userIdentifier }}

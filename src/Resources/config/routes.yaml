@@ -1,3 +1,0 @@
-cp:
-  resource: 'routing/cp.yaml'
-  name_prefix: cp_

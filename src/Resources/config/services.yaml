@@ -1,17 +1,6 @@
 services:
-  Rock\Controller\CpController:
-    tags: [ controller.service_arguments, controller.service_subscriber ]
-    public: true
-    calls:
-      - [ setContainer, [ '@Psr\Container\ContainerInterface' ] ]
-
   Rock\Twig\Extension:
     tags: [ 'twig.extension' ]
-
-  Rock\Routes\RouteLoader:
-    public: true
-    autowire: true
-    tags: [ 'routing.loader' ]
 
   Rock\Menu\UserMenu:
     tags: ['menu']

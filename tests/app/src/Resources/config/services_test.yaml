@@ -1,8 +1,5 @@
 services:
   _instanceof:
-    Rock\Twig\Contracts\HookInterface:
-      tags: [ 'rock.template_hook' ]
-
     Rock\Contracts\PluginInterface:
       tags: [ 'rock.plugin' ]
 
@@ -13,13 +10,6 @@ services:
 
   Rock\Twig\Extension:
     tags: [ 'twig.extension' ]
-    arguments: [ '@Rock\Twig\Renderer' ]
-    public: true
-
-  Rock\Twig\Renderer:
-    arguments:
-      - !tagged_iterator rock.template_hook
-      - '@Twig_Environment'
     public: true
 
   Rock\Test\app\src\Rock:
@@ -27,11 +17,6 @@ services:
 
   Rock\Test\app\src\RockWithCustomName:
     tags: ['rock.plugin']
-
-  Rock\Test\app\src\Twig\MyHook:
-    tags: [ 'rock.template_hook' ]
-    arguments:
-      [ '@Twig_Environment' ]
 
   Rock\Menu\MainMenu:
     arguments:

@@ -1,5 +1,0 @@
-dashboard:
-  path: /dashboard
-  methods: [ GET ]
-  defaults:
-    _controller: 'Rock\Controller\CpController::index'

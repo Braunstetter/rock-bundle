@@ -21,7 +21,7 @@ class UserMenu extends Menu
 
     public function define(): Traversable
     {
-        yield MenuItem::linkToRoute('Profile', 'cp_dashboard');
+//        yield MenuItem::linkToRoute('Profile', 'cp_dashboard');
 
         if ($this->authorizationChecker->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
             yield MenuItem::linkToRoute('Logout', 'app_logout');

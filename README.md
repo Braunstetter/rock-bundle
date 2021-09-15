@@ -17,7 +17,7 @@ This bundle contains:
 ## Control panel
 
 This dashboard is the base for your projects: 
-![the dashboard](../../../../../var/folders/24/nxy81fp13m138vz8b3xbbdk40000gn/T/TemporaryItems/NSIRD_screencaptureui_c1JETk/Bildschirmfoto 2021-09-15 um 06.06.33.png)
+![the dashboard](docs/images/control-panel.png)
 
 As you can see there is a sidebar a clear structure and a user menu in the right corner. 
 It's pretty - it's modern - it's responsive - it's pure [Twig](https://twig.symfony.com/) witch [Stimulus](https://stimulus.hotwired.dev/). 

@@ -1,0 +1,12 @@
+{
+  "entrypoints": {
+    "tailwind": {
+      "js": [
+        "/runtime.js"
+      ],
+      "css": [
+        "/tailwind.css"
+      ]
+    }
+  }
+}

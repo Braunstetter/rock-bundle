@@ -1,0 +1,4 @@
+# MenuBundle
+
+## Installation
+

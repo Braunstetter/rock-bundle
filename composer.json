@@ -11,6 +11,7 @@
   ],
   "require": {
     "php": "^8.0",
+    "symfony/framework-bundle": "^4.4|^5.0",
     "symfony/security-bundle": "^5.3",
     "symfony/asset": "^5.3",
     "braunstetter/control-panel-bundle": "^0.2",
@@ -27,8 +28,8 @@
     }
   },
   "require-dev": {
-    "symfony/framework-bundle": "^4.4|^5.0",
-    "phpunit/phpunit": "^9.5",
-    "symfony/test-pack": "^1.0"
+    "symfony/test-pack": "^1.0",
+    "matthiasnoback/symfony-dependency-injection-test": "^4.2",
+    "nyholm/symfony-bundle-test": "^1.8"
   }
 }

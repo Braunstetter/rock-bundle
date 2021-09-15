@@ -15,14 +15,11 @@ class UserMenu extends Menu
     {
         parent::__construct();
 
-
         $this->authorizationChecker = $authorizationChecker;
     }
 
     public function define(): Traversable
     {
-//        yield MenuItem::linkToRoute('Profile', 'cp_dashboard');
-
         if ($this->authorizationChecker->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
             yield MenuItem::linkToRoute('Logout', 'app_logout');
         }

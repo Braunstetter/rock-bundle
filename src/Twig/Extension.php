@@ -10,13 +10,6 @@ use Twig\TwigTest;
 class Extension extends AbstractExtension
 {
 
-    public function getFunctions(): array
-    {
-        return [
-//            new TwigFunction('rock_menu', [$this, 'getRockMenu'], ['is_safe' => ['html'], 'needs_context' => true])
-        ];
-    }
-
     /**
      * @inheritdoc
      */

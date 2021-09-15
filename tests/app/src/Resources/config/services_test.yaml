@@ -1,24 +1,4 @@
 services:
-  _instanceof:
-    Rock\Contracts\PluginInterface:
-      tags: [ 'rock.plugin' ]
-
-  Rock\Services\Plugins:
-    arguments:
-      - !tagged_iterator rock.plugin
-    public: true
-
   Rock\Twig\Extension:
     tags: [ 'twig.extension' ]
-    public: true
-
-  Rock\Test\app\src\Rock:
-    tags: ['rock.plugin']
-
-  Rock\Test\app\src\RockWithCustomName:
-    tags: ['rock.plugin']
-
-  Rock\Menu\MainMenu:
-    arguments:
-      - '@Rock\Services\Plugins'
     public: true

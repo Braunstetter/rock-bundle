@@ -2,11 +2,13 @@
 
 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
 
-    <div class="dropdown-menu" id="user-nav" data-controller="braunstetter--control-panel--menu">
+    {% css 'bundles/rock/tailwind.css' %}
+
+    <div class="dropdown-menu" id="user-nav" data-controller="braunstetter--control-panel-bundle--menu">
 
         <button type="button"
                 id="menu-button"
-                data-braunstetter--control-panel--menu-target="opener"
+                data-braunstetter--control-panel-bundle--menu-target="opener"
                 aria-expanded="false" aria-haspopup="true" aria-label="{{ 'My user account'|trans }}"
                 title="{{ 'My user account'|trans }}">
 
@@ -19,13 +21,13 @@
 
         <div role="menu"
              aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
-             data-braunstetter--control-panel--menu-target="content" {{ transition.fadeInOut() }}>
+             data-braunstetter--control-panel-bundle--menu-target="content" {{ transition.fadeInOut() }}>
 
             <div id="user-info">
                 {{ app.user.userIdentifier }}
             </div>
 
-            {% for entry in menu_results('user_menu') %}
+            {% for entry in menu_result('user_menu') %}
                 {% set path = entry.routeParameters ? path(entry.routeName, entry.routeParameters) : path(entry.routeName) %}
 
                 <a href="{{ path }}" role="menuitem"
@@ -39,9 +41,6 @@
                 </a>
 
             {% endfor %}
-
-
         </div>
     </div>
-
 {% endif %}

@@ -15,7 +15,8 @@
     "symfony/security-bundle": "^5.3",
     "symfony/asset": "^5.3",
     "braunstetter/control-panel-bundle": "^0.2",
-    "braunstetter/menu-bundle": "^0.2"
+    "braunstetter/menu-bundle": "^0.2",
+    "symfony/translation": "^5.3"
   },
   "autoload": {
     "psr-4": {
@@ -24,7 +25,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Rock\\Test\\": "tests/"
+      "Rock\\Tests\\": "Tests/"
     }
   },
   "require-dev": {

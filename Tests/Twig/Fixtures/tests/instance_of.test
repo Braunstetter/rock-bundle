@@ -1,0 +1,20 @@
+--TEST--
+"instance_of" test outputs correctly
+
+--TEMPLATE--
+
+{% if bool is boolean %}
+true
+{% endif %}
+
+{% if noBool is not boolean %}
+false
+{% endif %}
+
+--DATA--
+return ['bool' => true, 'noBool' => 'I am no boolean.']
+
+--EXPECT--
+true
+
+false

@@ -1,0 +1,7 @@
+services:
+  Rock\Menu\UserMenu:
+    tags: ['menu']
+    arguments:
+      - '@security.authorization_checker'
+      - '@translator.default'
+    public: true

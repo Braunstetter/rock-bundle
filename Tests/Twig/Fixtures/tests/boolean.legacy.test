@@ -1,0 +1,20 @@
+--TEST--
+"instance_of" test outputs correctly
+
+--TEMPLATE--
+
+{% if class is instance of('stdClass') %}
+true
+{% endif %}
+
+{% if noClass is not instance of('stdClass') %}
+false
+{% endif %}
+
+--DATA--
+return ['class' => new stdClass, 'noClass' => 'I am no class.']
+
+--EXPECT--
+true
+
+false

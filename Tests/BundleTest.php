@@ -1,6 +1,6 @@
 <?php
 
-namespace Rock\Test;
+namespace Rock\Tests;
 
 use Nyholm\BundleTest\AppKernel;
 use Rock\DependencyInjection\RockExtension;

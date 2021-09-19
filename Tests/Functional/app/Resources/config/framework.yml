@@ -1,0 +1,11 @@
+framework:
+  secret: test
+  router: { resource: "%kernel.project_dir%/Cases/%kernel.test_case%/routing.yml", utf8: true }
+  assets: ~
+  test: ~
+  session:
+    storage_factory_id: session.storage.factory.mock_file
+  profiler: { only_exceptions: false }
+
+services:
+  logger: { class: Psr\Log\NullLogger }

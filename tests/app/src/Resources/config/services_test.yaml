@@ -1,4 +1,0 @@
-services:
-  Rock\Twig\Extension:
-    tags: [ 'twig.extension' ]
-    public: true

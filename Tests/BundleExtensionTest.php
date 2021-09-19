@@ -1,6 +1,6 @@
 <?php
 
-namespace Rock\Test;
+namespace Rock\Tests;
 
 use Rock\DependencyInjection\RockExtension;
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
@@ -17,4 +17,5 @@ class BundleExtensionTest extends AbstractExtensionTestCase
         $this->load();
         $this->assertContainerBuilderHasService('Rock\Twig\Extension');
     }
+
 }

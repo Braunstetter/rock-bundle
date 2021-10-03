@@ -25,7 +25,7 @@ class UserMenu extends Menu
     {
         if ($this->authorizationChecker->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
             yield MenuItem::linkToRoute(
-                ucfirst($this->translator->trans('logout', [], 'cp')),
+                $this->translator->trans('logout', [], 'cp'),
                 'app_logout'
             );
         }

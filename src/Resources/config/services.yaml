@@ -6,3 +6,4 @@ services:
     tags: ['menu']
     arguments:
       - '@security.authorization_checker'
+      - '@translator.default'

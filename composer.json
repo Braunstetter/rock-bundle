@@ -11,12 +11,12 @@
   ],
   "require": {
     "php": "^8.0",
-    "symfony/framework-bundle": "^4.4|^5.0",
-    "symfony/security-bundle": "^5.3",
-    "symfony/asset": "^5.3",
+    "symfony/framework-bundle": "^5.3|^6.0",
+    "symfony/security-bundle": "^5.3|^6.0",
+    "symfony/asset": "^5.3|^6.0",
     "braunstetter/control-panel-bundle": "^0.2",
     "braunstetter/menu-bundle": "^0.2",
-    "symfony/translation": "^5.3"
+    "symfony/translation": "^5.3|^6.0"
   },
   "autoload": {
     "psr-4": {

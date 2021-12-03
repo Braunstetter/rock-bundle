@@ -9,7 +9,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class RockBundle extends Bundle
 {
-    public function getContainerExtension(): bool|RockExtension|ExtensionInterface|null
+    public function getContainerExtension(): ?ExtensionInterface
     {
         if (null === $this->extension) {
             $this->extension = new RockExtension();

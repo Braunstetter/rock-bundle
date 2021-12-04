@@ -1,0 +1,15 @@
+{% extends '@ControlPanel/base.html.twig' %}
+
+{% block global_header_right  %}
+    {% include '@Rock/cp/menu/user-menu.html.twig' %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('app') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+

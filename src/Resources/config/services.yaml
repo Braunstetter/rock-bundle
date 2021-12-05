@@ -2,8 +2,8 @@ services:
   Rock\Twig\Extension:
     tags: [ 'twig.extension' ]
 
-  Rock\Menu\UserMenu:
-    tags: ['menu']
-    arguments:
-      - '@security.authorization_checker'
-      - '@translator.default'
+#  Rock\Menu\UserMenu:
+#    tags: ['menu']
+#    arguments:
+#      - '@security.authorization_checker'
+#      - '@translator.default'

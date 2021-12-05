@@ -30,7 +30,7 @@
             {% for entry in menu_result('user_menu') %}
                 {% set path = entry.routeParameters ? path(entry.routeName, entry.routeParameters) : path(entry.routeName) %}
 
-                <a href="{{ path }}" role="menuitem"
+                <a href="{{ path }}" role="menuitem" {% if entry.current %}class="active"{% endif %}
                    tabindex="-1" id="{{ "user-menu-item-#{loop.index}" }}">
 
                     {% if icon is defined %}

@@ -12,13 +12,15 @@
                 aria-expanded="false" aria-haspopup="true" aria-label="{{ 'My user account'|trans }}"
                 title="{{ 'My user account'|trans }}">
 
-            {% block user_image %}
+             <span class="user-picture">
+            {%- block user_image -%}
                 {% if app.user.userPicture %}
                     <img src="{{ app.user.userPicture.getFullPath }}" alt="{{ app.user.userPicture.filename }}">
                 {% else %}
                     {{ source('@ControlPanel/images/male_avatar.svg') }}
                 {% endif %}
-            {% endblock %}
+            {%- endblock -%}
+             </span>
 
         </button>
 

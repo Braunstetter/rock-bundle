@@ -5,7 +5,7 @@
     > button {
         @apply inline-flex items-center h-full space-x-2;
 
-        > svg, img {
+        > svg {
             @apply svg-md;
         }
 
